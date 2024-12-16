@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  
+</head>
+  
+  <script>
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDescription = document.getElementById("modal-description");
+    const projectButtons = document.querySelectorAll(".project-btn");
+    const closeModal = document.querySelector(".close-btn");
+  
+    projectButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const projectKey = button.getAttribute("data-project");
+        modalTitle.textContent = projectDetails[projectKey].title;
+        modalDescription.textContent = projectDetails[projectKey].description;
+        modal.classList.add("show");
+      });
+    });
+  
+    closeModal.addEventListener("click", () => {
+      modal.classList.remove("show");
+    });
+  
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("show");
+      }
+    });
+  </script>
+  
+
+  <header>
+  
+
+    <section id="hero">
+        <div class="hero-content">
+          <h1>Hello, I'm [Your Name]</h1>
+          <p>Aspiring Web Developer | Lifelong Learner</p>
+          <a href="#projects" class="cta-btn">See My Work</a>
+        </div>
+      </section>
+      
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="about us.html">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+</header>
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skill">
+      <span>HTML</span>
+      <div class="progress">
+        <div class="progress-bar" style="width: 90%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>CSS</span>
+      <div class="progress">
+        <div class="progress-bar" style="width: 80%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>JavaScript</span>
+      <div class="progress">
+        <div class="progress-bar" style="width: 70%;"></div>
+      </div>
+    </div>
+  </section>
+  
+
+  <button class="details-btn">View Details</button>
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <p>Project 1: A web-based to-do list!</p>
+    </div>
+  </div>
+  <section id="projects">
+    <h2>My Projects</h2>
+  
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+      </div>
+    </div>
+  </section>
+  
+   
+      
+  <footer>
+    <p>&copy; 2024 My Portfolio</p>
+  </footer>
+  <button id="back-to-top" title="Go to top">↑</button>
+
+</body>
+</html>
+
