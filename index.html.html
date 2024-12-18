@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Portfolio</title>
+  <!-- Link Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+      animation: fadeIn 1.5s;
+    }
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    /* Layout of Sections */
+    section {
+      padding: 4rem 1.5rem;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    section h2 {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      animation: slideInFromLeft 1.5s;
+    }
+
+    /* About Section */
+    #about {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Projects Section */
+    #projects {
+      background: #f0f0f0;
+    }
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      animation: fadeIn 1.5s;
+    }
+    .project-card {
+      background: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .project-card h3 {
+      margin: 1rem;
+      font-size: 1.5rem;
+      color: #333;
+    }
+    .project-card p {
+      margin: 0 1rem 1rem;
+      color: #666;
+    }
+
+    /* Contact Section */
+    #contact {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .contact-info i {
+      color: #4CAF50;
+    }
+
+    /* Buttons */
+    .cta-btn {
+      padding: 0.8rem 1.6rem;
+      background: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+      margin-top: 2rem;
+    }
+    .cta-btn:hover {
+      background: #45a049;
+    }
+
+    .special-btn {
+      padding: 1rem 2rem;
+      background: #ff5722;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 2rem;
+      transition: background 0.3s ease;
+    }
+    .special-btn:hover {
+      background: #e64a19;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInFromLeft {
+      from { transform: translateX(-100%); }
+      to { transform: translateX(0); }
+    }
+.footer{
+  background-color: #45a049;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to My Special Portfolio</h1>
+    <p>A showcase of my work and skills</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m NGABOYIMANZI PACIFIQUE, a passionate web developer who loves crafting beautiful and functional websites. My journey in tech started with curiosity and has grown into a career focused on delivering quality and creative solutions.</p>
+    <a href="#projects" class="cta-btn">See My Projects</a>
+  </section>
+
+  <!-- Special Action Button -->
+  <section id="special-action">
+    <button class="special-btn" onclick="alert('Special Action Triggered!')">Click for Special Action</button>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="C:\Users\Manzi\Downloads\team-nocoloco-U6L073YlbMo-unsplash.jpg " alt="Project 1">
+        <h3>Project 1: Todo App</h3>
+        <p>A simple and elegant to-do list application to manage your daily tasks efficiently.</p>
+      </div>
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="C:\Users\Manzi\Downloads\team-nocoloco-IMuwMQV92zA-unsplash.jpg " alt="Project 2">
+        <h3>Project 2: Portfolio Website</h3>
+        <p>A personal portfolio website to showcase my skills, projects, and contact information.</p>
+      </div>
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="C:\Users\Manzi\Downloads\shiona-das-Dg-i8OQaRGU-unsplash.jpg" alt="project 3">
+        <h3>Project 3: E-commerce Demo</h3>
+        <p>An e-commerce website mockup with basic product listing and cart functionality.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to get in touch, feel free to reach out via email or social media.</p>
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> <a href="mailto:manzi7392@gmail.com">manzi7392@gmail.com</a></p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
+      <p><i class="fab fa-github"></i> <a href="https://github.com/chrismanzi12" target="_blank">GitHub</a></p>
+    </div>
+
+    <!-- Contact Form -->
+    <form>
+      <h3>Send a Message</h3>
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <textarea placeholder="Your Message" required></textarea><br>
+      <button type="submit" class="cta-btn">Submit</button>
+    </form>
+  </section>
+
+ 
+   <!-- Footer -->
+<footer>
+  <p>&copy; 2024 My Special Portfolio</p>
+  <div class="big-g">major fabro</div>
+  <div class="social-media">
+    <a href="https://linkedin.com/in/example" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/example" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com/example" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com/example" target="blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
+</body></html>
+
